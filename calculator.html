@@ -21,35 +21,43 @@
     <div id="calculator">
       <input type="text" id="input-text" value="0"> 
 
+                    <!--this.value = value inside quotations-->
+
             <div class="top-btn">
-                <input id="clear" type="button" value="AC" onclick="dis('AC')">
-                <input id="module" type="button" value="%" onclick="dis('%')">
-                <input id=""   type="button" value="+ " onclick="dis('+')">
-                <input id="line" type="button" value="/" onclick="dis('/')">
+                <input type="button" value="AC" onclick="clear()">
+                <input type="button" value="+/-" onclick="dis(this.value)">
+                <input type="button" value="+ " onclick="add()">
+                <input type="button" value="/" onclick="divide()">
             </div>
   
             <div class="row">
-              <input id="seven" type="button" value="7" onclick="dis('7')">
-              <input id="eight" type="button" value="8" onclick="dis('8')"> 
-              <input id="nine"  type="button" value="9" onclick="dis('9')"> 
-              <input id="multi" type="button" value="x" onclick="dis('x')">
+              <input type="button" value="7" onclick="dis(this.value)">
+              <input type="button" value="8" onclick="dis(this.value)"> 
+              <input type="button" value="9" onclick="dis(this.value)"> 
+              <input type="button" value="*" onclick="multi()">
                
 
             </div>
             <div class="row">
-               <input id="four"  type="button" value="4" onclick="dis('4')">
-               <input id=" five" type="button" value="5" onclick="dis('5')">
-               <input id="six"   type="button" value="6" onclick="dis('6')">
-               <input id="sub"   type="button" value="-" onclick="dis('-')">
+               <input type="button" value="4" onclick="dis(this.value)">
+               <input type="button" value="5" onclick="dis(this.value)">
+               <input type="button" value="6" onclick="dis(this.value)">
+               <input type="button" value="-" onclick="sub()">
             </div>
   
             <div class="row">
-               <input id="one"   type="button" value="1" onclick="dis('1')">
-               <input id="two"   type="button" value="2" onclick="dis('2')">
-               <input id="three" type="button" value="3" onclick="dis('3')">
-               <input id="add"   type="button" value="=" onclick="dis('=')">
-             
+               <input type="button" value="1" onclick="dis(this.value)">
+               <input type="button" value="2" onclick="dis(this.value)">
+               <input type="button" value="3" onclick="dis(this.value)">
+               <input type="button" value="+" onclick="add()">
             </div>
+
+            <div class="row">
+              <input type="button" value="0" onclick="dis(this.value)">
+              <input type="button" value="." onclick="dis(this.value)">
+              <input type="button" value="  " onclick="dis(this.value)">
+              <input type="button" value="=" onclick="equals()">
+           </div>
     </div>
   <script src="calc.js" type="text/javascript"></script>
   </body>
