@@ -1,50 +1,63 @@
-
 let operation; //undefined
 let operator1; //undefined
 let operator2; //undefined
+let clear;    
 
+function dis(value) {
+    document.getElementById("input-text").value = value;
 
-function dis(value)  { 
-    document.getElementById("input-text").value = value; 
-
-if (operator1) {
+if (operator1){
     operator2 = value;
 }else {
     operator1 = value;
 }
 
 console.log('operator1:', operator1);
-console.log('operator2:', operator2);   
-} 
-
-function add() {
-    console.log("add button was clicked!");
-    operation ='ADD';
+console.log('operator2:', operator2);
 }
 
-function sub() {
-    console.log("add button was clicked!");
-    operation =('SUBTRACT');
+function add(){
+    operation = 'ADD';
+    console.log("you clicked the add button");
+
+
 }
+
+function sub(){
+    operation = 'SUBTRACT';
+    console.log("you clicked the subtract button");
+}
+
+function divide(){
+    operation = 'DIVIDE';
+    console.log("you clicked the divide button");
+}
+
 function multi(){
-    console.log("muliplacation button was clicked");
-    operation = "MULTIPLY";
+    operation = 'MULTIPLY';
+    console.log("you clicked the mutiply button");
 }
 
+function AC(){
+    console.log("you clicked the clear button");
+}
+
+// Input value //how to use SWITCH Statements?
 function equals(){
- if (operation==='ADD'){
-    document.getElementById("input-text").value = parseInt(operator1, 10) + parseInt(operator2, 10);
-   if (operation==='SUBTRACT'){
-     document.getElementById("input-text").value = parseInt(operator1, 10) - parseInt(operator2, 10);
-     if (operation==='Mulitply'){
+    if (operation === 'ADD'){
+        document.getElementById("input-text").value = parseInt(operator1, 10) + parseInt(operator2, 10);
+    } else if (operation === 'SUBTRACT'){
+        document.getElementById("input-text").value = parseInt(operator1, 10) - parseInt(operator2, 10);
+    } else if (operation === 'DIVIDE'){
+        document.getElementById("input-text").value = parseInt(operator1, 10) / parseInt(operator2, 10);
+    } else if (operation === 'MULTIPLY'){
         document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
-    }
-
-
-function solve() 
-{ 
-    let x = document.getElementById("input-text").value;
-    let y = eval(x) 
-        document.getElementById("input-text").value = y;
+          
 }
+}
+    
+
+/*function AC(){
+        document.getElementById("input-text").clear;
+         };*/
 
