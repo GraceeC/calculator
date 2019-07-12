@@ -1,10 +1,14 @@
 let operation; //undefined
 let operator1; //undefined
 let operator2; //undefined
-let clear;    
+let clear;//undefined
 
+
+//button value
 function dis(value) {
+    document.getElementById("input-text").maxLength = "10";
     document.getElementById("input-text").value = value;
+        
 
 if (operator1){
     operator2 = value;
@@ -14,35 +18,37 @@ if (operator1){
 
 console.log('operator1:', operator1);
 console.log('operator2:', operator2);
-}
 
+}
+//operators
 function add(){
     operation = 'ADD';
     console.log("you clicked the add button");
-
-
 }
-
 function sub(){
     operation = 'SUBTRACT';
     console.log("you clicked the subtract button");
 }
-
 function divide(){
     operation = 'DIVIDE';
     console.log("you clicked the divide button");
 }
-
 function multi(){
     operation = 'MULTIPLY';
     console.log("you clicked the mutiply button");
 }
 
+//clear
 function AC(){
-    console.log("you clicked the clear button");
+    clear = 'RESET';
+    console.log("clear");
 }
 
-// Input value //how to use SWITCH Statements?
+
+
+
+
+//Declaring operators
 function equals(){
     if (operation === 'ADD'){
         document.getElementById("input-text").value = parseInt(operator1, 10) + parseInt(operator2, 10);
@@ -51,13 +57,6 @@ function equals(){
     } else if (operation === 'DIVIDE'){
         document.getElementById("input-text").value = parseInt(operator1, 10) / parseInt(operator2, 10);
     } else if (operation === 'MULTIPLY'){
-        document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
-          
+        document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);     
+    }
 }
-}
-    
-
-/*function AC(){
-        document.getElementById("input-text").clear;
-         };*/
-
