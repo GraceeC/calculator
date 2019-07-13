@@ -1,7 +1,8 @@
+//variables
 let operation; //undefined
 let operator1; //undefined
 let operator2; //undefined
-let clear;//undefined
+let clear =document.getElementById('input-text').clear;
 
 
 //button value
@@ -20,7 +21,7 @@ console.log('operator1:', operator1);
 console.log('operator2:', operator2);
 
 }
-//operators
+//operators buttona
 function add(){
     operation = 'ADD';
     console.log("you clicked the add button");
@@ -36,19 +37,14 @@ function divide(){
 function multi(){
     operation = 'MULTIPLY';
     console.log("you clicked the mutiply button");
-}
 
-//clear
+}
 function AC(){
-    clear = 'RESET';
-    console.log("clear");
+ clear = "RESET";
+        console.log("clear");
 }
 
-
-
-
-
-//Declaring operators
+//function math operoters
 function equals(){
     if (operation === 'ADD'){
         document.getElementById("input-text").value = parseInt(operator1, 10) + parseInt(operator2, 10);
@@ -57,6 +53,6 @@ function equals(){
     } else if (operation === 'DIVIDE'){
         document.getElementById("input-text").value = parseInt(operator1, 10) / parseInt(operator2, 10);
     } else if (operation === 'MULTIPLY'){
-        document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);     
+        document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
     }
 }
