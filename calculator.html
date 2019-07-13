@@ -19,43 +19,39 @@
     <h1>Grace's Calculator</h1>
     
     <div id="calculator">
-      <input type="text" id="input-text" value="0"> 
-
-                    <!--this.value = value inside quotations-->
-
-            <div class="top-btn">
-                <input type="button" value="AC" onclick="clear()">
-                <input type="button" value="+/-" onclick="dis(this.value)">
-                <input type="button" value="+ " onclick="add()">
-                <input type="button" value="/" onclick="divide()">
+      <input type="text" id="input-text" maxlength="10" value="0" > 
+          <div class="operators">
+                <input type="button" value="AC" onclick="AC()">
+                <input type="button" value="M+ " onclick="MPLUS()">
+                <input type="button" value="M- " onclick="MMINUS()">
+                <input type="button" value="MR" onclick="MR()">
             </div>
-  
-            <div class="row">
+
+          <div class="num">
               <input type="button" value="7" onclick="dis(this.value)">
               <input type="button" value="8" onclick="dis(this.value)"> 
               <input type="button" value="9" onclick="dis(this.value)"> 
               <input type="button" value="*" onclick="multi()">
-               
-
             </div>
-            <div class="row">
+
+          <div class="num">
                <input type="button" value="4" onclick="dis(this.value)">
                <input type="button" value="5" onclick="dis(this.value)">
                <input type="button" value="6" onclick="dis(this.value)">
                <input type="button" value="-" onclick="sub()">
             </div>
-  
-            <div class="row">
+
+          <div class="num">
                <input type="button" value="1" onclick="dis(this.value)">
                <input type="button" value="2" onclick="dis(this.value)">
                <input type="button" value="3" onclick="dis(this.value)">
                <input type="button" value="+" onclick="add()">
             </div>
 
-            <div class="row">
+          <div class="operators2">
               <input type="button" value="0" onclick="dis(this.value)">
               <input type="button" value="." onclick="dis(this.value)">
-              <input type="button" value="  " onclick="dis(this.value)">
+              <input type="button" value="/" onclick="divide()">
               <input type="button" value="=" onclick="equals()">
            </div>
     </div>
