@@ -1,58 +1,73 @@
 //variables
-let operation; //undefined
+let operation; //undefined 
 let operator1; //undefined
 let operator2; //undefined
-let clear =document.getElementById('input-text').clear;
 
-
-//button value
+//value
 function dis(value) {
-    document.getElementById("input-text").maxLength = "10";
     document.getElementById("input-text").value = value;
-        
 
-if (operator1){
-    operator2 = value;
-}else {
-    operator1 = value;
+    if (operator1){
+        operator2 = value;
+    }else {
+        operator1 = value;
+    
+    console.log('operator1:', operator1);
+    console.log('operator2:', operator2);  
+    }
 }
 
-console.log('operator1:', operator1);
-console.log('operator2:', operator2);
-
-}
-//operators buttona
-function add(){
+//operators 
+function add() {
     operation = 'ADD';
     console.log("you clicked the add button");
 }
-function sub(){
+function sub() {
     operation = 'SUBTRACT';
     console.log("you clicked the subtract button");
 }
-function divide(){
+function divide() {
     operation = 'DIVIDE';
     console.log("you clicked the divide button");
 }
-function multi(){
+function multi() {
     operation = 'MULTIPLY';
     console.log("you clicked the mutiply button");
-
+}    
+//Length
+function OperatorLength(operator){
+    if (operator1 && operator2.length > 10) {    
+        return operator.substring(0,operator.length);
+    } else {
+        return operator;
+    }
 }
-function AC(){
- clear = "RESET";
-        console.log("clear");
+
+//Clear 
+function reset() {
+    document.getElementById("input-text").value=0;
+    operator='undefined';
+    opertaor1='undefined';
+    operator2='undefined';
+    console.log('clear');
+}
+function MPLUS(){
+    document.getElementById("input-text").value=" ";
+    operator='undefined';
+    opertaor1='undefined';
+    operator2='undefined';
+    console.log('MPLUS');
 }
 
 //function math operoters
-function equals(){
-    if (operation === 'ADD'){
+function equals() {
+    if (operation === 'ADD') {
         document.getElementById("input-text").value = parseInt(operator1, 10) + parseInt(operator2, 10);
-    } else if (operation === 'SUBTRACT'){
+    } else if(operation === 'SUBTRACT') {
         document.getElementById("input-text").value = parseInt(operator1, 10) - parseInt(operator2, 10);
-    } else if (operation === 'DIVIDE'){
+    } else if(operation === 'DIVIDE') {
         document.getElementById("input-text").value = parseInt(operator1, 10) / parseInt(operator2, 10);
-    } else if (operation === 'MULTIPLY'){
+    } else if(operation === 'MULTIPLY') {
         document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
     }
 }
