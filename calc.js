@@ -18,34 +18,53 @@ function dis(value) {
     }
 }
 
-function length() {
-    if (operator1 += operator2.length > 10);
-        return operator(0, operator.length);
-}
-
 //operators 
 function add() {
     operation = 'ADD';
     console.log("you clicked the add button");
+
+    if (operator1 && operator2) {
+        equals();
+        operator1 = document.getElementById("input-text").value;
+        operator2 = undefined;
+    }
 }
 
 function sub() {
     operation = 'SUBTRACT';
     console.log("you clicked the subtract button");
+   
+    if (operator1 && operator2) {
+        equals();
+        operator1 = document.getElementById("input-text").value;
+        operator2 = undefined;
+    }
 }
 
 function divide() {
     operation = 'DIVIDE';
     console.log("you clicked the divide button");
+
+    if (operator1 && operator2) {
+        equals();
+        operator1 = document.getElementById("input-text").value;
+        operator2 = undefined;
+    }
 }
 
 function multi() {
     operation = 'MULTIPLY';
     console.log("you clicked the mutiply button");
+
+    if (operator1 && operator2) {
+        equals();
+        operator1 = document.getElementById("input-text").value;
+        operator2 = undefined;
+    }
 }
 
 //Clear 
-function reset() {
+function AC() {
     document.getElementById("input-text").value = 0;
     operator = 'undefined';
     opertaor1 = 'undefined';
@@ -53,15 +72,6 @@ function reset() {
     console.log('clear');
 }
 
-//function MPLUS(){
-//    document.getElementById("input-text").value=" ";
-//    operator='undefined';
-//    opertaor1='undefined';
-//    operator2='undefined';
-//    console.log('MPLUS');
-//}
-
-//function math operoters
 function equals() {
     if (operation === 'ADD') {
         document.getElementById("input-text").value = parseInt(operator1, 10) + parseInt(operator2, 10);
@@ -72,4 +82,5 @@ function equals() {
     } else if (operation === 'MULTIPLY') {
         document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
     }
+
 }
