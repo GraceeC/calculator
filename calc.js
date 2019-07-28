@@ -2,13 +2,14 @@
 let operation; //undefined 
 let operator1; //undefined
 let operator2; //undefined
+let maxlenght; //undefined
 //let memory = ['MPLUS', 'MMINUS', 'MR'];
 
 //value
 function dis(value) {
-    document.getElementById("input-text").value = value;
+    document.getElementById("input-text").value = parseInt(value);
 
-    if (operator1) {
+  if (operator1) {
         operator2 = value;
     } else {
         operator1 = value;
@@ -16,8 +17,17 @@ function dis(value) {
         console.log('operator1:', operator1);
         console.log('operator2:', operator2);
     }
-}
+    for(let i= 0; i < dis(value).length){
 
+    }
+   
+    }
+}
+if (operator1 && operator2) {
+    equals();
+    operator1 = document.getElementById("input-text").parseInt(value);
+    operator2 = undefined;
+}
 //operators 
 function add() {
     operation = 'ADD';
@@ -25,7 +35,7 @@ function add() {
 
     if (operator1 && operator2) {
         equals();
-        operator1 = document.getElementById("input-text").value;
+        operator1 = document.getElementById("input-text").parseInt(value);
         operator2 = undefined;
     }
 }
@@ -36,7 +46,7 @@ function sub() {
    
     if (operator1 && operator2) {
         equals();
-        operator1 = document.getElementById("input-text").value;
+        operator1 = document.getElementById("input-text").parseInt(value);
         operator2 = undefined;
     }
 }
@@ -47,25 +57,24 @@ function divide() {
 
     if (operator1 && operator2) {
         equals();
-        operator1 = document.getElementById("input-text").value;
+        operator1 = document.getElementById("input-text").parseInt(value);
         operator2 = undefined;
     }
 }
-
 function multi() {
     operation = 'MULTIPLY';
     console.log("you clicked the mutiply button");
 
     if (operator1 && operator2) {
         equals();
-        operator1 = document.getElementById("input-text").value;
+        operator1 = document.getElementById("input-text").parseInt(value);
         operator2 = undefined;
     }
 }
 
 //Clear 
 function AC() {
-    document.getElementById("input-text").value = 0;
+    document.getElementById("input-text").parseInt(value) = 0;
     operator = 'undefined';
     opertaor1 = 'undefined';
     operator2 = 'undefined';
@@ -82,5 +91,4 @@ function equals() {
     } else if (operation === 'MULTIPLY') {
         document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
     }
-
 }
