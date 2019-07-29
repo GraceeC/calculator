@@ -2,32 +2,43 @@
 let operation; //undefined 
 let operator1; //undefined
 let operator2; //undefined
-let maxlenght; //undefined
+let maxlenght = 10; 
 //let memory = ['MPLUS', 'MMINUS', 'MR'];
 
 //value
 function dis(value) {
     document.getElementById("input-text").value = parseInt(value);
 
-  if (operator1) {
-        operator2 = value;
+    if (operator1) {
+        operator2 = parseInt(value);
     } else {
-        operator1 = value;
+        operator1 = parseInt(value);
 
         console.log('operator1:', operator1);
         console.log('operator2:', operator2);
     }
-    for(let i= 0; i < dis(value).length){
-
-    }
-   
-    }
 }
 if (operator1 && operator2) {
     equals();
-    operator1 = document.getElementById("input-text").parseInt(value);
+    operator1 = document.getElementById("input-text").maxlength = "10".parseInt(value);
     operator2 = undefined;
+    
 }
+
+
+/*{if (value.length > maxlength){
+    { if (    (eval(value) == 0)
+           && (Current.indexOf(".") == -1)
+         )
+        { value = dig;
+        } else
+        { value = value + dig;
+        };
+ }; };
+document.Calculator.Display.value = value;
+}*/
+
+
 //operators 
 function add() {
     operation = 'ADD';
@@ -43,7 +54,7 @@ function add() {
 function sub() {
     operation = 'SUBTRACT';
     console.log("you clicked the subtract button");
-   
+
     if (operator1 && operator2) {
         equals();
         operator1 = document.getElementById("input-text").parseInt(value);
@@ -61,6 +72,7 @@ function divide() {
         operator2 = undefined;
     }
 }
+
 function multi() {
     operation = 'MULTIPLY';
     console.log("you clicked the mutiply button");
