@@ -1,4 +1,4 @@
-//variables
+
 let operation; //undefined 
 let operator1; //undefined
 let operator2; //undefined
@@ -12,21 +12,46 @@ function numberButtonPress(number) {
     console.log("operator2 ", operator2);
 
     if (operation === undefined) {
-        if (operator1 === undefined) {
-            operator1 = number;
-        } else {
-            operator1 += number;
-        }
-        document.getElementById("input-text").value = parseInt(operator1);
+        setOperator1(number);
+        displayValue(operator1);
     } else
     if (operator1) {
-        operator2 = parseInt(number, 10);
+        setOperator2(number);
+        displayValue(operator2);
     } else {
-        operator1 = parseInt(number, 10);
+        operator1 = parseInt(number);
+        displayValue(operator1);
     }
 
-    console.log('operator1:', operator1);
-    console.log('operator2:', operator2);
+    console.log("-----After-----");
+    console.log("operation ", operation);
+    console.log("operator1 ", operator1);
+    console.log("operator2 ", operator2);
+
+}
+
+function setOperator1(value) {
+    if (operator1 === undefined) {
+        operator1 = value;
+    } else {
+        operator1 += value;
+    }
+}
+
+function setOperator2(value) {
+    if (operator2 === undefined) {
+        operator2 = value;
+    } else {
+        operator2 += value;
+    }
+}
+
+function displayValue(value) {
+    document.getElementById("input-text").value = value;
+}
+
+function getValue() {
+    document.getElementById("input-text").value
 }
 
 //operators 
@@ -36,7 +61,7 @@ function add() {
 
     if (operator1 && operator2) {
         equals();
-        operator1 = document.getElementById("input-text").parseInt(value);
+        operator1 = getValue()
         operator2 = undefined;
     }
 }
@@ -47,7 +72,7 @@ function sub() {
 
     if (operator1 && operator2) {
         equals();
-        operator1 = document.getElementById("input-text").parseInt(value);
+        operator1 = getValue()
         operator2 = undefined;
     }
 }
@@ -58,7 +83,7 @@ function divide() {
 
     if (operator1 && operator2) {
         equals();
-        operator1 = document.getElementById("input-text").parseInt(value);
+        operator1 = getValue()
         operator2 = undefined;
     }
 }
@@ -69,14 +94,14 @@ function multi() {
 
     if (operator1 && operator2) {
         equals();
-        operator1 = document.getElementById("input-text").parseInt(value);
+        operator1 = getValue()
         operator2 = undefined;
     }
 }
 
 //Clear 
-function reset() {
-    document.getElementById("input-text").parseInt(value) = 0;
+function C() {
+    document.getElementById("input-text").value = 0;
     operator = 'undefined';
     opertaor1 = 'undefined';
     operator2 = 'undefined';
@@ -88,7 +113,7 @@ function decimal(value) {
         document.getElementById("input-text").parseInt(value) = ".";
         if (operator1 && operator2) {
             equals();
-            operator1 = document.getElementById("input-text").parseInt(value);
+            operator1 = getValue();
             operator2 = ".";
         } else {
             return value;
@@ -97,9 +122,6 @@ function decimal(value) {
 
     }
 }
-
-
-
 
 function equals() {
     if (operation === 'ADD') {
