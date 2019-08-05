@@ -1,4 +1,4 @@
-
+//variables
 let operation; //undefined 
 let operator1; //undefined
 let operator2; //undefined
@@ -107,21 +107,14 @@ function C() {
     operator2 = 'undefined';
 }
 
-function decimal(value) {
-    if (action === 'decimal') {
-        display.textContent = value + '.'
-        document.getElementById("input-text").parseInt(value) = ".";
-        if (operator1 && operator2) {
-            equals();
-            operator1 = getValue();
-            operator2 = ".";
-        } else {
-            return value;
-
+function decimal() {
+    document.getElementById("input-text").value + ".";
+        operator = (parseFloat(operator1) && parseFloat(operator2)) ;
+        operator1 = toFIxed(getValue());
+        operator2 = ".";
+            equals()
         }
 
-    }
-}
 
 function equals() {
     if (operation === 'ADD') {
@@ -134,3 +127,4 @@ function equals() {
         document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
     }
 }
+
