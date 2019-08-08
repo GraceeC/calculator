@@ -2,6 +2,7 @@
 let operation; //undefined 
 let operator1; //undefined
 let operator2; //undefined
+let dot; //undefined
 
 
 //value
@@ -108,14 +109,13 @@ function C() {
 }
 
 function decimal() {
-    document.getElementById("input-text").value + ".";
-        operator = (parseFloat(operator1) && parseFloat(operator2)) ;
-        operator1 = toFIxed(getValue());
-        operator2 = ".";
-            equals()
-        }
-
-
+    if (action === 'decimal') {
+        if (!input-text.includes('.')) return inpu-text + '.'
+        if (previousKeyType === 'operator1' || previousKeyType === 'operator2') return '0.'
+        document.getElementById("input-text").value = 0;
+      }
+    }
+    
 function equals() {
     if (operation === 'ADD') {
         document.getElementById("input-text").value = parseInt(operator1, 10) + parseInt(operator2, 10);
@@ -127,4 +127,3 @@ function equals() {
         document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
     }
 }
-
