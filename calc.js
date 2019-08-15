@@ -2,7 +2,8 @@
 let operation; //undefined 
 let operator1; //undefined
 let operator2; //undefined
-let dot; //undefined
+let memory = ["MR", "MPlus", "MMinus"];
+
 
 
 //value
@@ -20,7 +21,7 @@ function numberButtonPress(number) {
         setOperator2(number);
         displayValue(operator2);
     } else {
-        operator1 = parseInt(number);
+        operator1 = parseFloat(number);
         displayValue(operator1);
     }
 
@@ -108,22 +109,43 @@ function C() {
     operator2 = 'undefined';
 }
 
+
+
 function decimal() {
-    if (action === 'decimal') {
-        if (!input-text.includes('.')) return inpu-text + '.'
-        if (previousKeyType === 'operator1' || previousKeyType === 'operator2') return '0.'
-        document.getElementById("input-text").value = 0;
-      }
+    if (operator1 === "undefinded") {
+        setOperator2(".");
+        displayValue(operator2);
+    } else {
+        operator1 = (".");
+        displayValue(operator1);
+    
     }
+}
+
+function MR(){
+    console.log("you clicked MR");
+    if (operation === "MR") {
+        setOperator1(value);
+        displayValue(operator1);
+    } else
+    if (operator1) {
+        setOperator2(value);
+        displayValue(operator1);
+    } else {
+        operator1 = parseFloat(number);
+        displayValue(operator2);
+    }
+}
+    
     
 function equals() {
     if (operation === 'ADD') {
-        document.getElementById("input-text").value = parseInt(operator1, 10) + parseInt(operator2, 10);
+        document.getElementById("input-text").value = parseFloat(operator1) + parseFloat(operator2);
     } else if (operation === 'SUBTRACT') {
-        document.getElementById("input-text").value = parseInt(operator1, 10) - parseInt(operator2, 10);
+        document.getElementById("input-text").value = parseFloat(operator1) - parseFloat(operator2);
     } else if (operation === 'DIVIDE') {
-        document.getElementById("input-text").value = parseInt(operator1, 10) / parseInt(operator2, 10);
+        document.getElementById("input-text").value = parseFloat(operator1) / parseFloat(operator2);
     } else if (operation === 'MULTIPLY') {
-        document.getElementById("input-text").value = parseInt(operator1, 10) * parseInt(operator2, 10);
+        document.getElementById("input-text").value = parseFloat(operator1) * parseFloat(operator2);
     }
 }
