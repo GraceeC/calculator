@@ -1,46 +1,46 @@
-body{
-    background-color:rgb(223, 210, 210)
-      
-    }
-    #input-text{
-      font-size:25px;
-      text-align:center;
-    }
-    #calculator {
-        margin-left: auto;
-        margin-right:auto;
-        border-style: solid;
-        border-width: 5px;
-        border-radius:    20px;
-        height: 350px;
-        width: 300px;
-        text-align:center;
-        background-color:rgb(141,133, 133);
-        color:white;
-    }
-    
-    
-    h1 {
-        text-align: center;
-      font-family: 'Playfair Display', serif;
-      color:rgb(81,69,69);
-    }
-    
-    
-    #input-text{
-      height:15%;
-      width:80%;
-      margin:15px;
-      border-radius:25px;
-    }
-    
-    input[type="button"] {
-      font-size:25px;
-      width:20%;
-      height:45px;
-      border-radius:50%;
-      font-family: 'Playfair Display', serif;
-    
-    }
-    
+body {
+  background-color: rgb(223, 210, 210)
+}
+
+#input-text {
+  font-size: 25px;
+  text-align: center;
+}
+
+#calculator {
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  height: 350px;
+  width: 300px;
+  text-align: center;
+  background-color: rgb(141, 133, 133);
+  color: white;
+}
+
+
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: rgb(81, 69, 69);
+}
+
+
+#input-text {
+  height: 15%;
+  width: 80%;
+  margin: 15px;
+  border-radius: 25px;
+}
+
+input[type="button"] {
+  font-size: 25px;
+  width: 20%;
+  height: 45px;
+  border-radius: 50%;
+  font-family: 'Playfair Display', serif;
+
+}
     
