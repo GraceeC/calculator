@@ -104,41 +104,38 @@ function multi() {
 //Clear 
 function C() {
     document.getElementById("input-text").value = 0;
-    operator = 'undefined';
-    opertaor1 = 'undefined';
-    operator2 = 'undefined';
+    operator = undefined;
+    opertaor1 = undefined;
+    operator2 = undefined;
 }
 
 
 
 function decimal() {
-    if (operator1 === "undefinded") {
-        setOperator2(".");
-        displayValue(operator2);
+    if (operator1 += ".") {
+        setOperator1(operator1);
+        displayValue('.');
     } else {
-        operator1 = (".");
-        displayValue(operator1);
-    
+        operator2 = (operator2);
+        displayValue(".");
     }
 }
 
 function MR(){
     console.log("you clicked MR");
-    if (operation === "MR") {
-        setOperator1(value);
+    if (operation === "undefined") {
+        setOperator1(currentValue);
         displayValue(operator1);
     } else
     if (operator1) {
         setOperator2(value);
         displayValue(operator1);
     } else {
-        operator1 = parseFloat(number);
+        operator1 = parseFloat();
         displayValue(operator2);
     }
 }
-    
-    
-function equals() {
+    function equals() {
     if (operation === 'ADD') {
         document.getElementById("input-text").value = parseFloat(operator1) + parseFloat(operator2);
     } else if (operation === 'SUBTRACT') {
